@@ -9,6 +9,10 @@ Feeding audio (e.g. a guitar) into `vcont` makes FM that you can receive with an
 
 ![Layout](docs/images/layout_2d.png)
 
+
+![Block diagram](docs/images/block.png)
+
+
 ## Pins
 
 | Pin | Function |
