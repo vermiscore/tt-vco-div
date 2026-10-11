@@ -7,8 +7,11 @@ An NMOS LC VCO running at around 5 GHz feeds a CML divide-by-8, so the output is
 Feeding audio (e.g. a guitar) into `vcont` makes FM that you can receive with an SDR.
 
 
+## Layout
+
 ![Layout](docs/images/layout_2d.png)
 
+## Block diagram
 
 ![Block diagram](docs/images/block.png)
 
