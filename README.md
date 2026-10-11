@@ -1,36 +1,31 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# 5 GHz VCO with ÷8 divider (Tiny Tapeout SKY26d)
 
-- [Read the documentation for project](docs/info.md)
+An FM transmitter on a Tiny Tapeout 2x2 analog tile (SKY130).
+An NMOS LC VCO running at around 5 GHz feeds a CML divide-by-8, so the output is in the 600–700 MHz range.
+Feeding audio (e.g. a guitar) into `vcont` makes FM that you can receive with an SDR.
 
-## What is Tiny Tapeout?
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+![Layout](docs/images/layout_2d.png)
 
-To learn more and get started, visit https://tinytapeout.com.
+## Pins
 
-## Analog projects
+| Pin | Function |
+|---|---|
+| ua[0] | RF output (+), around 600–700 MHz |
+| ua[1] | RF output (−) |
+| ua[2] | vcont, VCO tuning input (around 0.4 V) |
 
-For specifications and instructions, see the [analog specs page](https://tinytapeout.com/specs/analog/).
+## Notes
 
-## Enable GitHub actions to build the results page
+- The output frequency depends on vcont, supply voltage, process and temperature.
+- The VCO is sensitive to supply noise, so a clean LDO is recommended.
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+## Documentation
 
-## Resources
+How it works and how to test it: [docs/info.md](docs/info.md)
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
+## About Tiny Tapeout
 
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
-  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
+[Tiny Tapeout](https://tinytapeout.com) is an educational project that makes it easier and cheaper to get designs manufactured on a real chip.
